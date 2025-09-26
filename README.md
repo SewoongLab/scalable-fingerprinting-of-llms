@@ -1,1 +1,1 @@
-# scalable-fingerprinting-of-llms
+# Scalable Fingerprinting of Large Language Models
