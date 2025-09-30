@@ -46,10 +46,10 @@ To get started, follow these steps:
 6. **Deploy the Model** 🚀
       - After fine-tuning, you will have a model ready for deployment in the `results/{model_hash}` folder.
 
-**Bash Scripts**
+### Bash Scripts
 We have provided two bash scripts for convenience:
 
-- `fingerprint_models.sh`
+**`fingerprint_models.sh`**
 - Sweeps finetuning runs, checks fingerprints, and batches utility eval across 4 GPUs.
 - Edit variables in the script (e.g., `fingerprints_file_path`, `learning_rate`, `batch_size`, `num_train_epochs`).
 - Run:
@@ -58,7 +58,7 @@ We have provided two bash scripts for convenience:
   ```
 - Each run appends a config hash to `current_config_hash.txt`. The script builds `results/saved_models/<HASH>/final_model` and runs `check_fingerprints.py` and `eval_utility.py`.
 
-- `evaluate_persistence.sh`
+**`evaluate_persistence.sh`**
 - Automates persistence evaluation after downstream SFT via LLaMA Factory.
 - Requires `fingerprint_models.txt` listing config hashes (one per line). For convenience, you can reuse `current_config_hash.txt`:
   ```bash
